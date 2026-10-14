@@ -28,10 +28,10 @@ function hoy() {
 
 // Protección: si la página es privada y no hay sesión, vuelve al login
 if (document.body.dataset.protegida === "si" && !sessionStorage.getItem("usuario")) {
-  location.href = "index.html";
+  location.href = "login.html";
 }
 
-// Botón ☰: abre y cierra el menú (solo existe en escaner y asistencia)
+// Botón ☰: abre y cierra el menú (solo existe en escáner y asistencia)
 document.querySelectorAll(".btnMenu").forEach(b =>
   b.addEventListener("click", () => $("menu").classList.toggle("oculto"))
 );
@@ -40,6 +40,6 @@ document.querySelectorAll(".btnMenu").forEach(b =>
 if ($("btnSalir")) {
   $("btnSalir").addEventListener("click", () => {
     sessionStorage.removeItem("usuario");
-    location.href = "index.html";
+    location.href = "login.html";
   });
 }
