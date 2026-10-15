@@ -16,4 +16,4 @@ $("formLogin").addEventListener("submit", (e) => {
   } else {
     $("errorLogin").textContent = "Correo o contraseña incorrectos.";
   }
-});
+})
